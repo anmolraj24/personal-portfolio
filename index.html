@@ -1,315 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Personal portfolio of Anmol Raj, B.Tech Computer Science student at JECRC University, Jaipur."
-    />
-    <title>Anmol Raj | Personal Portfolio</title>
-    <!-- Link the stylesheet so the page uses style.css -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Skip link helps keyboard users jump to the main content -->
-    <a class="skip-link" href="#home">Skip to content</a>
 
-    <!-- ===== HEADER / NAVIGATION ===== -->
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="logo" href="#home">Anmol Raj</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anmol Raj - Portfolio</title>
+  <meta name="description" content="Personal portfolio of Anmol Raj, a second-year B.Tech CSE student at JECRC University, Jaipur.">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
 
-        <!-- Mobile menu button (shown on small screens) -->
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-controls="primary-nav"
-          aria-expanded="false"
-          aria-label="Open menu"
-        >
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-        </button>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">Anmol Raj</div>
+    <div class="nav-controls">
+      <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+      <button id="menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#chatbot">Chatbot</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-
-        <!-- Light / dark theme switch. The selected theme is saved in localStorage. -->
-        <button
-          class="theme-toggle"
-          type="button"
-          aria-pressed="false"
-          aria-label="Switch to light mode"
-        >
-          <span class="theme-icon" aria-hidden="true">☀️</span>
-          <span class="theme-label">Light</span>
-        </button>
+  <main>
+    <section id="home">
+      <img src="images/avatar.svg" alt="Anmol Raj" class="profile-photo" id="profile-photo">
+      <h1>Anmol Raj</h1>
+      <p class="tagline">Building Innovative Solutions Through Code, Creativity, and Continuous Learning.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <!-- ===== HOME ===== -->
-      <section id="home" class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">B.Tech CSE · Second year · JECRC University</p>
-            <h1>Hi, I am Anmol Raj.</h1>
-            <p class="lead">
-              I am a second-year B.Tech Computer Science and Engineering student
-              at JECRC University, Jaipur. I am building this personal portfolio
-              as a college assessment project and I am learning web development
-              with HTML, CSS, and JavaScript.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">View projects</a>
-              <a class="btn btn-secondary" href="#contact">Contact me</a>
-            </div>
-          </div>
-          <aside class="hero-card" aria-label="Quick profile facts">
-            <p class="hero-card-label">Currently</p>
-            <h2>Aspiring web developer</h2>
-            <ul class="fact-list">
-              <li><span>University</span> JECRC University, Jaipur</li>
-              <li><span>Year</span> Second year · Expected 2029</li>
-              <li><span>CGPA</span> 8.0</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <!-- ===== ABOUT ===== -->
-      <section id="about" class="section">
-        <div class="container">
-          <h2 class="section-title">About me</h2>
-          <p class="section-intro">
-            A short overview of my education and what I am working on right now.
-          </p>
-          <div class="about-grid">
-            <article class="panel">
-              <h3>Education</h3>
-              <p>
-                I am pursuing a B.Tech in Computer Science and Engineering at
-                JECRC University, Jaipur. I am currently in my second year, with
-                an expected graduation year of 2029. My current CGPA is 8.0.
-              </p>
-            </article>
-            <article class="panel">
-              <h3>Background</h3>
-              <p>
-                I am an aspiring web developer. Through coursework and practice I
-                am learning how websites are structured, styled, and made
-                interactive. This portfolio is my first complete website project
-                for college assessment. A chatbot using a real API will be added
-                in a later step.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== SKILLS ===== -->
-      <section id="skills" class="section section-alt">
-        <div class="container">
-          <h2 class="section-title">Skills I am learning</h2>
-          <p class="section-intro">
-            These are technologies I have studied or am currently learning. I am
-            still building experience, so this list is a study snapshot rather
-            than a claim of professional expertise.
-          </p>
-          <ul class="skills-grid">
-            <li class="skill-card">
-              <h3>HTML</h3>
-              <p>Page structure, semantic tags, forms, and accessibility basics.</p>
-            </li>
-            <li class="skill-card">
-              <h3>CSS</h3>
-              <p>Layout, responsive design, theming, and visual styling.</p>
-            </li>
-            <li class="skill-card">
-              <h3>JavaScript</h3>
-              <p>DOM updates, events, filtering, and saving settings locally.</p>
-            </li>
-            <li class="skill-card">
-              <h3>C++</h3>
-              <p>Programming fundamentals and problem-solving in coursework.</p>
-            </li>
-            <li class="skill-card">
-              <h3>C</h3>
-              <p>Core language concepts studied as part of my degree.</p>
-            </li>
-            <li class="skill-card">
-              <h3>Python</h3>
-              <p>Scripts, practice programs, and code-improvement exercises.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ===== PROJECTS ===== -->
-      <section id="projects" class="section">
-        <div class="container">
-          <h2 class="section-title">Projects</h2>
-          <p class="section-intro">
-            Course and practice work from my studies. Repository and live demo
-            links are marked as placeholders until I add the real URLs.
-          </p>
-
-          <!-- Search filters the five project cards as you type -->
-          <label class="search-label" for="project-search">Search projects</label>
-          <input
-            id="project-search"
-            class="project-search"
-            type="search"
-            placeholder="Try Python, Quiz, or Book"
-            autocomplete="off"
-          />
-          <p id="project-empty" class="empty-message" hidden>
-            No projects match your search. Try another keyword such as Python,
-            Quiz, or Book.
-          </p>
-
-          <div id="project-grid" class="project-grid">
-            <article
-              class="project-card"
-              data-title="Python Programs Collection"
-              data-description="factorial Fibonacci structure-to-dictionary conversion python programs"
-              data-tech="Python"
-            >
-              <p class="project-tag">Python</p>
-              <h3>Python Programs Collection</h3>
-              <p>
-                A small collection of Python practice programs covering
-                factorial calculation, Fibonacci sequence generation, and
-                converting a structure into a dictionary.
-              </p>
-              <p class="project-tech">Technology: Python</p>
-              <p class="placeholder-note">
-                Project URL: not added yet — replace this later.
-              </p>
-            </article>
-
-            <article
-              class="project-card"
-              data-title="Messy Python Code Improvement"
-              data-description="improving messy Python code using AI assistance cleanup refactor"
-              data-tech="Python"
-            >
-              <p class="project-tag">Python</p>
-              <h3>Messy Python Code Improvement</h3>
-              <p>
-                Practice work focused on reading messy Python code and
-                improving it with AI assistance, with attention to readability
-                and clearer structure.
-              </p>
-              <p class="project-tech">Technology: Python</p>
-              <p class="placeholder-note">
-                Project URL: not added yet — replace this later.
-              </p>
-            </article>
-
-            <article
-              class="project-card"
-              data-title="Bug Fixing Using Cursor AI"
-              data-description="debugging correcting an incorrect program bug fixing Cursor AI"
-              data-tech="Python JavaScript"
-            >
-              <p class="project-tag">Debugging</p>
-              <h3>Bug Fixing Using Cursor AI</h3>
-              <p>
-                A debugging exercise where I used Cursor AI to find issues in an
-                incorrect program and correct them.
-              </p>
-              <p class="project-tech">Technology: Python / JavaScript</p>
-              <p class="placeholder-note">
-                Project URL: not added yet — replace this later.
-              </p>
-            </article>
-
-            <article
-              class="project-card"
-              data-title="Interactive Quiz Application"
-              data-description="interactive quiz application developed in Lecture 10"
-              data-tech="HTML CSS JavaScript"
-            >
-              <p class="project-tag">Lecture 10</p>
-              <h3>Interactive Quiz Application</h3>
-              <p>
-                An interactive quiz application developed in Lecture 10 as part
-                of my web development coursework.
-              </p>
-              <p class="project-tech">Technology: HTML, CSS, JavaScript</p>
-              <p class="placeholder-note">
-                Project URL: not added yet — replace this later.
-              </p>
-            </article>
-
-            <article
-              class="project-card"
-              data-title="Book Reading List Application"
-              data-description="book reading list application developed in Lecture 11"
-              data-tech="HTML CSS JavaScript"
-            >
-              <p class="project-tag">Lecture 11</p>
-              <h3>Book Reading List Application</h3>
-              <p>
-                A book reading list application developed in Lecture 11 to
-                practice building a small interactive web app.
-              </p>
-              <p class="project-tech">Technology: HTML, CSS, JavaScript</p>
-              <p class="placeholder-note">
-                Project URL: not added yet — replace this later.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== CONTACT ===== -->
-      <section id="contact" class="section section-alt">
-        <div class="container contact-wrap">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-intro">
-            If you would like to get in touch about college work or web
-            development, you can email me or visit GitHub.
-          </p>
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="mailto:anmol2004rajratan@gmail.com">
-              Email Anmol
-            </a>
-            <a
-              class="btn btn-secondary"
-              href="https://github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub profile
-            </a>
-          </div>
-          <p class="contact-note">
-            Email:
-            <a href="mailto:anmol2004rajratan@gmail.com">anmol2004rajratan@gmail.com</a>
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>Anmol Raj · Personal Portfolio Website with API-Based Chatbot Integration</p>
-        <p>JECRC University, Jaipur · College assessment project</p>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a second-year Computer Science and Engineering student at JECRC University, Jaipur, passionate about coding, problem-solving, and software development. I love building practical digital solutions, exploring modern web frameworks, and turning creative ideas into reality.</p>
+      <div class="education">
+        <h3>Education</h3>
+        <p><strong>B.Tech in Computer Science and Engineering</strong></p>
+        <p>JECRC University, Jaipur · Second Year (Expected Graduation: 2029) · CGPA: 8.0</p>
       </div>
-    </footer>
+    </section>
 
-    <!-- JavaScript is loaded at the end so the HTML exists before the script runs -->
-    <script src="script.js"></script>
-  </body>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+        <li>C</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Cursor AI</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <input type="text" id="search" placeholder="Search projects (e.g., Python, Quiz, AI)...">
+      <div id="project-list"></div>
+    </section>
+
+    <section id="chatbot">
+      <h2>AI Assistant</h2>
+      <p class="chatbot-intro">Have questions about Anmol's background, education, or projects? Ask the assistant below!</p>
+      <div class="quick-prompts">
+        <button class="quick-btn" type="button" data-prompt="What are Anmol's key skills?">Skills</button>
+        <button class="quick-btn" type="button" data-prompt="Tell me about Anmol's education and college.">Education</button>
+        <button class="quick-btn" type="button" data-prompt="What projects has Anmol built?">Projects</button>
+        <button class="quick-btn" type="button" data-prompt="How can I contact Anmol?">Contact Info</button>
+      </div>
+      <div id="chat-messages"></div>
+      <div class="chat-input-wrapper">
+        <input type="text" id="chat-input" placeholder="Ask me anything about Anmol...">
+        <button id="chat-send">Send</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate, discuss project opportunities, or get in touch, feel free to reach out:</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-label">Email:</span>
+          <a href="mailto:sumo172005@gmail.com">sumo172005@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">GitHub:</span>
+          <a href="https://github.com/anmolraj24/personal-portfolio" target="_blank" rel="noopener noreferrer">github.com/anmolraj24/personal-portfolio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Anmol Raj. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
